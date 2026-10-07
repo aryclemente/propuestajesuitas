@@ -17,11 +17,7 @@
         <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> contacto@jesuitas.org.ve</span>
       </div>
       <div class="top-actions">
-        <span>Red Apostólica:</span>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="proteccion-menores.html" style="color: var(--secondary-container); font-size: 0.82rem;"><i class="fas fa-shield-alt"></i> Entorno Seguro y Protección</a>
       </div>
     </div>
   </div>
@@ -30,21 +26,22 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="brand-logo">
-          <div class="brand-symbol">IHS</div>
-          <div class="brand-text">
-            <h1>JESUITAS</h1>
-            <span>VENEZUELA</span>
-          </div>
+          <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="brand-logo-img">
         </a>
 
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
-          <li><a href="index.html#obras">Apostolados</a></li>
-          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li class="dropdown">
+            <a href="quienes-somos.html" class="active">Quiénes Somos <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quienes-somos.html">Identidad y Carisma</a></li>
+              <li><a href="historia-impacto.html">Historia e Impacto (1916-2026)</a></li>
+            </ul>
+          </li>
+          <li><a href="directorio.html">Apostolados & Directorio</a></li>
           <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
           <li><a href="recursos.html">Recursos</a></li>
-          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
         </ul>
@@ -56,12 +53,10 @@
     </div>
   </header>
 
-  <section class="hero-section" style="min-height: 55vh; background: linear-gradient(rgba(40, 1, 6, 0.82), rgba(29, 27, 27, 0.9)), url('images/obra_espiritualidad.jpg') center/cover no-repeat;">
+  <section class="hero-section" style="min-height: 48vh; background: linear-gradient(rgba(40, 1, 6, 0.45), rgba(29, 27, 27, 0.55)), url('images/obra_espiritualidad.jpg') center/cover no-repeat;">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-tag">
-          <i class="fas fa-shield-alt"></i> Identidad y Carisma Ignaciano
-        </div>
+        <div class="hero-tag"><i class="fas fa-shield-alt"></i> Identidad y Carisma Ignaciano</div>
         <h1 class="hero-title">Quiénes Somos y <span>San Ignacio</span></h1>
         <p class="hero-description">
           Somos una orden religiosa de la Iglesia Católica dedicada a servir a la misión de Cristo en el mundo a través de la educación, el acompañamiento espiritual y la justicia social en Venezuela.
@@ -121,46 +116,65 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h2>JESUITAS VENEZUELA</h2>
-          <p>
-            Compañía de Jesús - Provincia de Venezuela.<br>
-            Construyendo caminos de fe, educación, justicia y reconciliación.
-          </p>
+          <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="footer-logo-img">
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Construyendo caminos de fe, educación, justicia y reconciliación.</p>
+          <div class="footer-contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Esquina de Mijares a Alcabala, Centro de Caracas.</span>
+            <span><i class="fas fa-phone"></i> +58 (212) 564-1234</span>
+            <span><i class="fas fa-envelope"></i> contacto@jesuitas.org.ve</span>
+          </div>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
 
         <div>
-          <h3 class="footer-title">Navegación</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-            <li><a href="index.html#obras">Apostolados</a></li>
-            <li><a href="directorio.html">Directorio Obras</a></li>
-            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
-            <li><a href="recursos.html">Recursos & Medios</a></li>
-            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
-            <li><a href="donar.html">Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
+          <h3 class="footer-title">Navegación del Portal</h3>
+          <div class="footer-nav-two-columns">
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+              <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+              <li><a href="directorio.html">Directorio Obras</a></li>
+              <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="recursos.html">Recursos & Medios</a></li>
+              <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
+              <li><a href="donar.html">Donaciones</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
         </div>
 
         <div>
-          <h3 class="footer-title">Instituciones</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
-            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
-            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-title">Contacto</h3>
-          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
-          <p style="font-size: 0.85rem; color: var(--secondary-container);">contacto@jesuitas.org.ve</p>
+          <div class="footer-newsletter-card">
+            <h3>Suscríbete al Boletín</h3>
+            <p>Recibe noticias, boletines y reflexiones ignacianas en tu correo.</p>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+              <input type="email" placeholder="Tu correo electrónico" required>
+              <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+                Suscribirme
+              </button>
+            </form>
+            <div style="margin-top: 15px; text-align: center;">
+              <a href="donar.html" class="btn-primary" style="width: 100%; justify-content: center; background-color: var(--accent-orange); border-color: var(--accent-orange); font-size: 0.85rem;">
+                <i class="fas fa-heart"></i> Colaborar con la Misión
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="footer-legal-links">
+          <a href="privacidad.html">Política de Privacidad</a> |
+          <a href="cookies.html">Política de Cookies</a>
+        </div>
         <div class="amdg-tag">A.M.D.G.</div>
       </div>
     </div>

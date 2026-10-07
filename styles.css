@@ -14,6 +14,11 @@
   --secondary-light: #AD7676;        /* Subtle Highlight */
   --secondary-container: #FFBFBE;
 
+  /* Additional Palette Accents (IG & Modern Highlights) */
+  --accent-aqua: #8FDDE5;            /* Soft Aqua / Light Teal Accent */
+  --accent-yellow: #F9BA6D;          /* Warm Amber Yellow */
+  --accent-orange: #F99621;          /* Bright Ignatian Orange */
+
   /* Surfaces & Backgrounds */
   --bg-main: #FEF8F7;                /* Warm Ivory Background */
   --surface-pure: #FFFFFF;           /* Pure White Container */
@@ -44,10 +49,10 @@
   --font-sans: 'Lato', sans-serif;   /* Humanist UI & Body Sans */
 
   /* Stitch Radii Tokens */
-  --radius-sm: 0.25rem;              /* 4px - Inputs & Buttons */
-  --radius-md: 0.5rem;               /* 8px - Cards & Panels */
-  --radius-lg: 0.75rem;              /* 12px - Modals & Banners */
-  --radius-pill: 9999px;             /* Sector Chips & Badges */
+  --radius-sm: 40px;                 /* 40px - Rounded Buttons per User Request */
+  --radius-md: 12px;                 /* Cards & Panels */
+  --radius-lg: 16px;                 /* Modals & Banners */
+  --radius-pill: 40px;               /* 40px Pill Radius for All Buttons */
 
   /* Stitch Shadows & Elevation */
   --elevation-0: none;
@@ -102,6 +107,64 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
+/* GLOBAL BUTTON STYLES (40px ROUNDED BORDERS)                                */
+/* -------------------------------------------------------------------------- */
+.btn-primary,
+.btn-secondary,
+.btn-donate-nav,
+.amount-btn,
+button,
+.btn-rounded {
+  border-radius: 40px !important;
+}
+
+/* Stitch Primary Button Specification */
+.btn-primary {
+  background-color: var(--primary-sanguine);
+  color: #FFFFFF !important;
+  padding: 12px 28px;
+  border-radius: 40px !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--primary-sanguine);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF !important;
+  padding: 12px 28px;
+  border-radius: 40px !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #FFFFFF;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------------------------------------- */
 /* STITCH TOP ANNOUNCEMENT BAR                                               */
 /* -------------------------------------------------------------------------- */
 .top-bar {
@@ -136,11 +199,11 @@ img {
 }
 
 .top-actions a:hover {
-  color: var(--secondary-container);
+  color: var(--accent-aqua);
 }
 
 /* -------------------------------------------------------------------------- */
-/* STITCH HEADER & NAVIGATION                                                 */
+/* STITCH HEADER & DROPDOWN NAVIGATION                                       */
 /* -------------------------------------------------------------------------- */
 .header {
   position: sticky;
@@ -155,57 +218,32 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
-/* Stitch Brand Seal Rule: IHS Monogram on solid primary reserve */
-.brand-symbol {
-  width: 44px;
+/* Official Logo Image Height Matching Header */
+.brand-logo-img {
   height: 44px;
-  background-color: var(--primary-sanguine);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  letter-spacing: 1px;
-}
-
-.brand-text h1 {
-  font-size: 1.3rem;
-  line-height: 1;
-  letter-spacing: -0.5px;
-  color: var(--primary-sanguine);
-}
-
-.brand-text span {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--text-muted);
-  font-weight: 700;
-  font-family: var(--font-sans);
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   list-style: none;
 }
 
 .nav-links a {
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-on-surface);
   position: relative;
   padding: 6px 0;
@@ -228,16 +266,58 @@ img {
   width: 100%;
 }
 
+/* Dropdown Menu for Quiénes Somos / Historia */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--surface-pure);
+  min-width: 220px;
+  box-shadow: var(--elevation-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 0;
+  list-style: none;
+  z-index: 1100;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-on-surface);
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--surface-container-low);
+  color: var(--primary-sanguine);
+}
+
+.dropdown-menu li a::after {
+  display: none;
+}
+
+.nav-links li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .btn-donate-nav {
-  background-color: var(--primary-sanguine);
+  background-color: var(--primary-sanguine) !important;
   color: #FFFFFF !important;
-  padding: 10px 22px !important;
-  border-radius: var(--radius-sm);
+  padding: 10px 24px !important;
+  border-radius: 40px !important;
   font-weight: 700 !important;
   text-transform: uppercase;
   font-size: 0.82rem !important;
   letter-spacing: 0.04em;
-  border: 1px solid var(--primary-sanguine);
+  border: 1px solid var(--primary-sanguine) !important;
+  box-shadow: 0 4px 12px rgba(128, 48, 48, 0.2);
 }
 
 .btn-donate-nav::after {
@@ -245,8 +325,8 @@ img {
 }
 
 .btn-donate-nav:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
 }
 
 .mobile-menu-toggle {
@@ -257,14 +337,14 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* STITCH HERO SECTION                                                        */
+/* HERO SECTION WITH TRANSPARENT OVERLAY (TRANSPARENTE SECTORES)             */
 /* -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 82vh;
+  min-height: 52vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(40, 1, 6, 0.8), rgba(29, 27, 27, 0.88)),
+  background: linear-gradient(rgba(40, 1, 6, 0.45), rgba(29, 27, 27, 0.55)),
               url('images/hero_banner.jpg') center/cover no-repeat;
   color: #FFFFFF;
   border-bottom: 3px solid var(--primary-sanguine);
@@ -273,15 +353,15 @@ img {
 .hero-content {
   max-width: 780px;
   z-index: 2;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 
 .hero-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
   padding: 6px 16px;
   border-radius: var(--radius-pill);
@@ -289,28 +369,31 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
 }
 
 .hero-title {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   color: #FFFFFF;
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-family: var(--font-serif);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title span {
-  color: var(--secondary-container);
+  color: var(--accent-yellow);
   font-style: italic;
 }
 
 .hero-description {
   font-size: 1.15rem;
-  color: var(--surface-container);
-  margin-bottom: 36px;
-  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  font-weight: 400;
   line-height: 1.7;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-cta-group {
@@ -319,48 +402,124 @@ img {
   flex-wrap: wrap;
 }
 
-/* Stitch Primary Button Specification */
-.btn-primary {
-  background-color: var(--primary-sanguine);
-  color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--primary-sanguine);
-  cursor: pointer;
+/* -------------------------------------------------------------------------- */
+/* SECTOR CARDS WITH TOP BANNER & CENTERED TEXT                              */
+/* -------------------------------------------------------------------------- */
+.sector-card-banner {
+  background: var(--surface-pure);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   transition: var(--transition);
 }
 
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+.sector-card-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--elevation-2);
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  display: inline-flex;
+.sector-banner-img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sector-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  border: 1.5px solid #FFFFFF;
-  cursor: pointer;
+  flex-grow: 1;
+}
+
+.sector-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-top: -48px;
+  background: var(--surface-pure);
+  box-shadow: var(--elevation-2);
+  margin-bottom: 12px;
+  border: 2px solid var(--border-subtle);
+}
+
+.sector-icon-box.educacion { color: var(--sector-educacion); border-color: var(--sector-educacion); }
+.sector-icon-box.social { color: var(--sector-social); border-color: var(--sector-social); }
+.sector-icon-box.pastoral { color: var(--sector-pastoral); border-color: var(--sector-pastoral); }
+.sector-icon-box.juventud { color: var(--sector-juventud); border-color: var(--sector-juventud); }
+
+.sector-card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-family: var(--font-serif);
+}
+
+.sector-card-body p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* INSTAGRAM FEED SIMULATED SECTION                                           */
+/* -------------------------------------------------------------------------- */
+.instagram-section {
+  background-color: var(--surface-pure);
+  padding: 70px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.instagram-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.ig-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
   transition: var(--transition);
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+.ig-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--elevation-2);
+}
+
+.ig-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.ig-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(128, 48, 48, 0.85), transparent);
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.ig-card:hover .ig-overlay {
+  opacity: 1;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -409,7 +568,7 @@ img {
 }
 
 .stat-number span {
-  color: var(--secondary-coral);
+  color: var(--accent-orange);
 }
 
 .stat-label {
@@ -424,7 +583,7 @@ img {
 /* SECTIONS & TYPOGRAPHY RHYTHM                                               */
 /* -------------------------------------------------------------------------- */
 .section {
-  padding: 85px 0;
+  padding: 80px 0;
 }
 
 .section-header {
@@ -458,13 +617,13 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* APOSTOLIC SECTOR CODIFICATION (STITCH CHIPS & CARDS)                      */
+/* APOSTOLIC SECTOR CODIFICATION                                             */
 /* -------------------------------------------------------------------------- */
 .sector-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: var(--radius-pill);
   font-size: 0.75rem;
   font-weight: 700;
@@ -692,165 +851,7 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* NOTICIAS Y AGENDA                                                          */
-/* -------------------------------------------------------------------------- */
-.news-events-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 35px;
-}
-
-@media (max-width: 992px) {
-  .news-events-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.news-card-featured {
-  background: var(--surface-pure);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--elevation-1);
-  margin-bottom: 24px;
-  border: 1px solid var(--border-subtle);
-}
-
-.news-meta {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  display: flex;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-.news-meta span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.news-list-small {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.news-item-small {
-  background: var(--surface-pure);
-  padding: 20px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--elevation-1);
-  border: 1px solid var(--border-subtle);
-  transition: var(--transition);
-}
-
-.news-item-small:hover {
-  border-color: var(--primary-sanguine);
-  box-shadow: var(--elevation-2);
-}
-
-.event-card {
-  background: var(--surface-pure);
-  padding: 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  margin-bottom: 16px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.event-date-box {
-  background: var(--primary-sanguine);
-  color: #FFFFFF;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  text-align: center;
-  min-width: 65px;
-}
-
-.event-date-box .day {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-  font-family: var(--font-serif);
-}
-
-.event-date-box .month {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.event-info h4 {
-  font-size: 1rem;
-  margin-bottom: 4px;
-  font-family: var(--font-serif);
-}
-
-.event-info p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* -------------------------------------------------------------------------- */
-/* DONACIONES & BANNER INSTITUCIONAL                                         */
-/* -------------------------------------------------------------------------- */
-.donation-banner {
-  background: linear-gradient(135deg, var(--primary-sanguine), var(--primary-dark));
-  color: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 55px 40px;
-  box-shadow: var(--elevation-3);
-  border: 1px solid var(--primary-dark);
-}
-
-.donation-banner-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .donation-banner-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.donation-box {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 32px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.amount-options {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.amount-btn {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: transparent;
-  color: #FFFFFF;
-  font-weight: 700;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.amount-btn.active, .amount-btn:hover {
-  background: #FFFFFF;
-  color: var(--primary-sanguine);
-  border-color: #FFFFFF;
-}
-
-/* -------------------------------------------------------------------------- */
-/* FOOTER                                                                     */
+/* REDESIGNED FOOTER (WITH LOGO, TWO-COLUMN NAV & WHITE NEWSLETTER CARD)      */
 /* -------------------------------------------------------------------------- */
 .footer {
   background-color: var(--primary-dark);
@@ -862,7 +863,7 @@ img {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.8fr 2fr 1.6fr;
   gap: 40px;
   margin-bottom: 50px;
 }
@@ -873,23 +874,65 @@ img {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .footer-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.footer-brand h2 {
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  font-family: var(--font-serif);
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
   font-size: 0.9rem;
   line-height: 1.7;
-  margin-bottom: 20px;
+}
+
+.footer-contact-info {
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.footer-contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-social-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.footer-social-links a:hover {
+  background: var(--accent-orange);
+  transform: translateY(-2px);
 }
 
 .footer-title {
@@ -911,32 +954,67 @@ img {
   background-color: var(--secondary-light);
 }
 
+.footer-nav-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
 .footer-links {
   list-style: none;
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
   color: var(--surface-container-high);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .footer-links a:hover {
   color: #FFFFFF;
-  padding-left: 5px;
+  padding-left: 4px;
 }
 
-.newsletter-form input {
+/* White Card for Newsletter in Footer */
+.footer-newsletter-card {
+  background: var(--surface-pure);
+  color: var(--text-on-surface);
+  padding: 28px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-2);
+  border: 1px solid var(--border-subtle);
+}
+
+.footer-newsletter-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-sanguine);
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+}
+
+.footer-newsletter-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.footer-newsletter-card input {
   width: 100%;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
-  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 40px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-container-low);
+  color: var(--text-on-surface);
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.footer-newsletter-card input:focus {
+  border-color: var(--primary-sanguine);
 }
 
 .footer-bottom {
@@ -948,6 +1026,19 @@ img {
   font-size: 0.85rem;
   flex-wrap: wrap;
   gap: 15px;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal-links a {
+  color: var(--surface-container-high);
+}
+
+.footer-legal-links a:hover {
+  color: var(--accent-aqua);
 }
 
 .amdg-tag {

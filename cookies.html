@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directorio y Buscador de Obras | Jesuitas Venezuela</title>
-  <meta name="description" content="Directorio nacional interactivo de instituciones educacionales, parroquias, centros sociales y casas de retiros de la Compañía de Jesús en Venezuela.">
+  <title>Política de Cookies | Jesuitas Venezuela</title>
+  <meta name="description" content="Política de uso de cookies y privacidad de navegación del portal oficial de la Compañía de Jesús en Venezuela.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,11 +13,11 @@
   <div class="top-bar">
     <div class="container">
       <div class="top-info">
-        <span><i class="fas fa-map-marker-alt" style="color: var(--secondary-container);"></i> Red Nacional de Obras Apostólicas</span>
+        <span><i class="fas fa-cookie-bite" style="color: var(--secondary-container);"></i> Información Legal y Privacidad</span>
         <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> contacto@jesuitas.org.ve</span>
       </div>
       <div class="top-actions">
-        <a href="proteccion-menores.html" style="color: var(--secondary-container); font-size: 0.82rem;"><i class="fas fa-shield-alt"></i> Entorno Seguro y Protección</a>
+        <a href="privacidad.html" style="color: var(--secondary-container); font-size: 0.82rem;"><i class="fas fa-user-shield"></i> Política de Privacidad</a>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
               <li><a href="historia-impacto.html">Historia e Impacto (1916-2026)</a></li>
             </ul>
           </li>
-          <li><a href="directorio.html" class="active">Apostolados & Directorio</a></li>
+          <li><a href="directorio.html">Apostolados & Directorio</a></li>
           <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
           <li><a href="recursos.html">Recursos</a></li>
           <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
@@ -53,76 +53,48 @@
     </div>
   </header>
 
-  <section class="hero-section" style="min-height: 45vh; background: linear-gradient(rgba(40, 1, 6, 0.45), rgba(29, 27, 27, 0.55)), url('images/obra_educacion.jpg') center/cover no-repeat;">
+  <section class="hero-section" style="min-height: 40vh; background: linear-gradient(rgba(40, 1, 6, 0.45), rgba(29, 27, 27, 0.55)), url('images/hero_banner.jpg') center/cover no-repeat;">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-tag"><i class="fas fa-map-marked-alt"></i> Red Nacional Apostólica</div>
-        <h1 class="hero-title">Directorio de <span>Obras e Instituciones</span></h1>
-        <p class="hero-description">
-          Localiza y contacta los colegios, universidades, parroquias, comedores populares, centros de investigación y casas de espiritualidad de los Jesuitas en Venezuela.
+        <div class="hero-tag"><i class="fas fa-cookie-bite"></i> Transparencia Legal</div>
+        <h1 class="hero-title">Política de <span>Cookies</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div style="background: var(--surface-pure); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1);">
+        <h2 style="font-family: var(--font-serif); margin-bottom: 16px; color: var(--primary-sanguine);">Uso de Cookies en Nuestro Portal</h2>
+        <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.8;">
+          En el portal web oficial de la Compañía de Jesús en Venezuela (Provincia Jesuita), utilizamos cookies técnicas y analíticas para garantizar el correcto funcionamiento del sitio, mejorar la velocidad de carga en conexiones variables y analizar estadísticas anónimas de visitas.
+        </p>
+
+        <h3 style="font-family: var(--font-serif); margin: 24px 0 12px 0; color: var(--primary-sanguine);">¿Qué son las cookies?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.8;">
+          Las cookies son pequeños archivos de texto que se almacenan en su navegador cuando visita un sitio web. No contienen virus ni recopilan información personal confidencial.
+        </p>
+
+        <h3 style="font-family: var(--font-serif); margin: 24px 0 12px 0; color: var(--primary-sanguine);">Tipos de cookies que utilizamos:</h3>
+        <ul style="color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; line-height: 1.8;">
+          <li><strong>Cookies Esenciales:</strong> Necesarias para la navegación y el uso de las funciones básicas (como guardar preferencias de búsqueda en el directorio).</li>
+          <li><strong>Cookies Analíticas:</strong> Nos ayudan a medir de forma anónima el tráfico de usuarios para optimizar la entrega de recursos pastorales y educativos.</li>
+        </ul>
+
+        <p style="color: var(--text-muted); line-height: 1.8;">
+          Usted puede desactivar o borrar las cookies en cualquier momento ajustando la configuración de su navegador web.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section directory-section">
-    <div class="container">
-      <div class="directory-controls">
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" id="directorySearch" placeholder="Buscar obra, institución, ciudad o palabra clave (ej: UCAB, Fe y Alegría, San Ignacio)...">
-        </div>
-
-        <select id="directoryCategory" class="filter-select">
-          <option value="all">Todos los Sectores Apostólicos</option>
-          <option value="educacion">Sector Educación / Fe y Alegría</option>
-          <option value="colegios">Colegios Ignacianos</option>
-          <option value="parroquias">Sector Pastoral / Parroquias</option>
-          <option value="social">Sector Social / JRS</option>
-          <option value="espiritualidad">Casas de Retiro</option>
-          <option value="pastoral">Movimiento Juvenil</option>
-        </select>
-
-        <select id="directoryState" class="filter-select">
-          <option value="all">Todos los Estados</option>
-          <option value="Caracas">Caracas (Distrito Capital)</option>
-          <option value="Bolívar">Bolívar (Guayana)</option>
-          <option value="Zulia">Zulia</option>
-          <option value="Lara">Lara</option>
-          <option value="Miranda">Miranda</option>
-          <option value="Táchira">Táchira</option>
-          <option value="Mérida">Mérida</option>
-        </select>
-      </div>
-
-      <div style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
-        <span style="font-size: 0.85rem; font-weight: 700; align-self: center; color: var(--text-muted);">Filtrar por sector:</span>
-        <button class="sector-chip educacion" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='educacion'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
-          <i class="fas fa-graduation-cap"></i> Educación
-        </button>
-        <button class="sector-chip social" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='social'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
-          <i class="fas fa-hands-helping"></i> Social
-        </button>
-        <button class="sector-chip pastoral" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='parroquias'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
-          <i class="fas fa-church"></i> Parroquias
-        </button>
-        <button class="sector-chip juventud" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='pastoral'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
-          <i class="fas fa-users"></i> Juventud
-        </button>
-      </div>
-
-      <div class="directory-results" id="directoryResults">
-        <!-- JS -->
-      </div>
-    </div>
-  </section>
-
+  <!-- Shared Footer Component -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="footer-logo-img">
-          <p>Compañía de Jesús - Provincia de Venezuela.<br>Red Apostólica Nacional.</p>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Construyendo caminos de fe, educación, justicia y reconciliación.</p>
           <div class="footer-contact-info">
             <span><i class="fas fa-map-marker-alt"></i> Esquina de Mijares a Alcabala, Centro de Caracas.</span>
             <span><i class="fas fa-phone"></i> +58 (212) 564-1234</span>

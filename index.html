@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesuitas Venezuela | En Todo Amar y Servir</title>
-  <meta name="description" content="Propuesta oficial de rediseño web para la Compañía de Jesús en Venezuela basada en el sistema de diseño Stitch (Sober Dignity & Apostolic Service).">
+  <meta name="description" content="Portal oficial de la Compañía de Jesús en Venezuela. Educación, Fe, Justicia Social, Entorno Seguro y Juventud.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Top Announcement Bar -->
   <div class="top-bar">
     <div class="container">
       <div class="top-info">
@@ -22,25 +23,26 @@
     </div>
   </div>
 
+  <!-- Header Navigation with Official Logo & Dropdown -->
   <header class="header">
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="brand-logo">
-          <div class="brand-symbol">IHS</div>
-          <div class="brand-text">
-            <h1>JESUITAS</h1>
-            <span>VENEZUELA</span>
-          </div>
+          <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="brand-logo-img">
         </a>
 
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-          <li><a href="index.html#obras">Apostolados</a></li>
-          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li class="dropdown">
+            <a href="quienes-somos.html">Quiénes Somos <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quienes-somos.html">Identidad y Carisma</a></li>
+              <li><a href="historia-impacto.html">Historia e Impacto (1916-2026)</a></li>
+            </ul>
+          </li>
+          <li><a href="directorio.html">Apostolados & Directorio</a></li>
           <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
           <li><a href="recursos.html">Recursos</a></li>
-          <li><a href="historia-impacto.html">Historia</a></li>
           <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
@@ -53,6 +55,7 @@
     </div>
   </header>
 
+  <!-- Hero Section with Lighter Transparency -->
   <section class="hero-section" id="inicio">
     <div class="container">
       <div class="hero-content">
@@ -61,10 +64,10 @@
         </div>
         <h1 class="hero-title">En Todo <span>Amar y Servir</span> con Esperanza</h1>
         <p class="hero-description">
-          Acompañando a las familias venezolanas mediante la educación popular, la fe encarnada, la promoción de la justicia social y el servicio ignaciano.
+          Acompañando a las familias venezolanas mediante la educación popular, la fe encarnada, la promoción de la justicia social y el servicio ignaciano desde 1916.
         </p>
         <div class="hero-cta-group">
-          <a href="#obras" class="btn-primary">
+          <a href="directorio.html" class="btn-primary">
             Conoce los Apostolados <i class="fas fa-arrow-right"></i>
           </a>
           <a href="donar.html" class="btn-secondary">
@@ -75,6 +78,7 @@
     </div>
   </section>
 
+  <!-- Stats Section -->
   <div class="container">
     <section class="stats-section">
       <div class="stats-grid">
@@ -98,161 +102,265 @@
     </section>
   </div>
 
-  <section class="section" id="quienes-somos">
+  <!-- Sectores Apostólicos (Tarjetas centradas con Banners superiores) -->
+  <section class="section" id="sectores">
     <div class="container">
       <div class="section-header">
         <span class="subtitle-badge">A.M.D.G. (Ad Maiorem Dei Gloriam)</span>
-        <h2 class="section-title">Nuestra Misión Apostólica en Venezuela</h2>
+        <h2 class="section-title">Los 4 Sectores Misioneros</h2>
         <p class="section-description">
-          Los Jesuitas somos una orden de la Iglesia Católica fundada por San Ignacio de Loyola. Formamos hombres y mujeres conscientes, competentes, compasivos y comprometidos con la transformación del país.
+          Nuestra labor en Venezuela se articula a través de cuatro dimensiones apostólicas fundamentales.
         </p>
       </div>
 
-      <div class="obras-grid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));">
-        <div class="obra-card" style="padding: 28px; text-align: center;">
-          <div style="font-size: 2.2rem; color: var(--primary-sanguine); margin-bottom: 12px;">
-            <i class="fas fa-graduation-cap"></i>
+      <div class="obras-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <!-- Sector Educación -->
+        <article class="sector-card-banner">
+          <img src="images/obra_educacion.jpg" alt="Sector Educación" class="sector-banner-img">
+          <div class="sector-card-body">
+            <div class="sector-icon-box educacion">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <span class="sector-chip educacion" style="margin-bottom: 12px;">Sector Educación</span>
+            <h3>Educación de Calidad</h3>
+            <p>Desde la UCAB hasta la red de escuelas técnicas Fe y Alegría e institutos universitarios en todo el país.</p>
+            <a href="directorio.html?cat=educacion" class="btn-primary" style="font-size: 0.8rem; padding: 8px 18px;">
+              Ver Instituciones <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <span class="sector-chip educacion" style="margin-bottom: 12px;">Sector Educación</span>
-          <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Educación de Calidad</h3>
-          <p>Desde la UCAB hasta la red de escuelas técnicas Fe y Alegría en todo el territorio nacional.</p>
-        </div>
+        </article>
 
-        <div class="obra-card" style="padding: 28px; text-align: center;">
-          <div style="font-size: 2.2rem; color: #696D00; margin-bottom: 12px;">
-            <i class="fas fa-hands-helping"></i>
+        <!-- Sector Social -->
+        <article class="sector-card-banner">
+          <img src="images/obra_social.jpg" alt="Sector Social" class="sector-banner-img">
+          <div class="sector-card-body">
+            <div class="sector-icon-box social">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <span class="sector-chip social" style="margin-bottom: 12px;">Sector Social</span>
+            <h3>Justicia y Dignidad</h3>
+            <p>Acompañamiento humanitario y comunitario a través del Centro Gumilla y el Servicio Jesuita a Refugiados (JRS).</p>
+            <a href="directorio.html?cat=social" class="btn-primary" style="font-size: 0.8rem; padding: 8px 18px;">
+              Ver Centros Sociales <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <span class="sector-chip social" style="margin-bottom: 12px;">Sector Social</span>
-          <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Justicia y Dignidad</h3>
-          <p>Acompañamiento humanitario y comunitario a través del Centro Gumilla y el Servicio Jesuita a Refugiados (JRS).</p>
-        </div>
+        </article>
 
-        <div class="obra-card" style="padding: 28px; text-align: center;">
-          <div style="font-size: 2.2rem; color: var(--sector-pastoral); margin-bottom: 12px;">
-            <i class="fas fa-pray"></i>
+        <!-- Sector Pastoral -->
+        <article class="sector-card-banner">
+          <img src="images/obra_espiritualidad.jpg" alt="Sector Pastoral" class="sector-banner-img">
+          <div class="sector-card-body">
+            <div class="sector-icon-box pastoral">
+              <i class="fas fa-pray"></i>
+            </div>
+            <span class="sector-chip pastoral" style="margin-bottom: 12px;">Sector Pastoral</span>
+            <h3>Fe y Espiritualidad</h3>
+            <p>Ejercicios Espirituales, parroquias populares y acompañamiento espiritual de discernimiento con sello ignaciano.</p>
+            <a href="directorio.html?cat=espiritualidad" class="btn-primary" style="font-size: 0.8rem; padding: 8px 18px;">
+              Ver Parroquias & Retiros <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <span class="sector-chip pastoral" style="margin-bottom: 12px;">Sector Pastoral</span>
-          <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Fe y Espiritualidad</h3>
-          <p>Ejercicios Espirituales, parroquias populares y acompañamiento espiritual con sello ignaciano.</p>
-        </div>
+        </article>
 
-        <div class="obra-card" style="padding: 28px; text-align: center;">
-          <div style="font-size: 2.2rem; color: var(--sector-juventud); margin-bottom: 12px;">
-            <i class="fas fa-users"></i>
+        <!-- Sector Juventud -->
+        <article class="sector-card-banner">
+          <img src="images/hero_banner.jpg" alt="Sector Juventud" class="sector-banner-img">
+          <div class="sector-card-body">
+            <div class="sector-icon-box juventud">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="sector-chip juventud" style="margin-bottom: 12px;">Sector Juventud</span>
+            <h3>Pastoral Juvenil</h3>
+            <p>Formación de jóvenes líderes mediante el Movimiento Juvenil Huellas y el acompañamiento vocacional.</p>
+            <a href="ser-jesuita.html" class="btn-primary" style="font-size: 0.8rem; padding: 8px 18px;">
+              Conoce Juventud <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <span class="sector-chip juventud" style="margin-bottom: 12px;">Sector Juventud</span>
-          <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Pastoral Juvenil</h3>
-          <p>Formación de jóvenes líderes mediante el Movimiento Huellas y procesos de vocaciones.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="obras" style="background-color: var(--surface-container-low);">
+  <!-- Detalle de 4 Obras y 8 Áreas Apostólicas (Grid Interactivo de Obras) -->
+  <section class="section" id="obras" style="background-color: var(--surface-container-low); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
     <div class="container">
       <div class="section-header">
-        <span class="subtitle-badge">Sectores Apostólicos</span>
-        <h2 class="section-title">Dimensiones de Nuestra Obra</h2>
-        <p class="section-description">Conoce las áreas estructuradas según la codificación del sistema de diseño de la Provincia.</p>
+        <span class="subtitle-badge">Red Nacional</span>
+        <h2 class="section-title">4 Grandes Obras y 8 Áreas Apostólicas</h2>
+        <p class="section-description">Una presencia integral estructurada para la transformación del país.</p>
       </div>
 
       <div class="obras-grid">
         <article class="obra-card">
           <div class="obra-img-wrapper">
-            <div class="obra-category-tag">
-              <span class="sector-chip educacion"><i class="fas fa-graduation-cap"></i> Sector Educación</span>
-            </div>
-            <img src="images/obra_educacion.jpg" alt="Educación Jesuita en Venezuela">
+            <div class="obra-category-tag"><span class="sector-chip educacion"><i class="fas fa-university"></i> Universidad</span></div>
+            <img src="images/obra_educacion.jpg" alt="UCAB">
           </div>
           <div class="obra-body">
-            <h3>Educación Superior y Escolar</h3>
-            <p>La Universidad Católica Andrés Bello (UCAB), el IUJO y la red de Colegios Ignacianos forman profesionales con sólida ética y excelencia humana.</p>
-            <a href="directorio.html" class="obra-link">Ver instituciones educacionales <i class="fas fa-arrow-right"></i></a>
+            <h3>1. UCAB (Universidad Católica Andrés Bello)</h3>
+            <p>Sedes en Caracas y Guayana. Formación profesional de excelencia, extensión comunitaria e investigación sociopolítica.</p>
+            <a href="https://www.ucab.edu.ve" target="_blank" class="obra-link">Sitio Web Oficial <i class="fas fa-external-link-alt"></i></a>
           </div>
         </article>
 
         <article class="obra-card">
           <div class="obra-img-wrapper">
-            <div class="obra-category-tag">
-              <span class="sector-chip social"><i class="fas fa-hands-helping"></i> Sector Social</span>
-            </div>
-            <img src="images/obra_social.jpg" alt="Acción Social Jesuita">
+            <div class="obra-category-tag"><span class="sector-chip educacion"><i class="fas fa-school"></i> Educación Popular</span></div>
+            <img src="images/hero_banner.jpg" alt="Fe y Alegría">
           </div>
           <div class="obra-body">
-            <h3>Acción Social y Humanitaria</h3>
-            <p>Comedores comunitarios, proyectos de formación en derechos humanos y acompañamiento al migrante con el JRS Venezuela.</p>
-            <a href="directorio.html" class="obra-link">Ver centros sociales <i class="fas fa-arrow-right"></i></a>
+            <h3>2. Movimiento Fe y Alegría</h3>
+            <p>Red de más de 175 escuelas técnicas, emisoras IRFA y centros de capacitación profesional en comunidades populares.</p>
+            <a href="https://www.feyalegria.org/venezuela" target="_blank" class="obra-link">Sitio Web Oficial <i class="fas fa-external-link-alt"></i></a>
           </div>
         </article>
 
         <article class="obra-card">
           <div class="obra-img-wrapper">
-            <div class="obra-category-tag">
-              <span class="sector-chip pastoral"><i class="fas fa-church"></i> Sector Pastoral</span>
-            </div>
-            <img src="images/obra_espiritualidad.jpg" alt="Espiritualidad Ignaciana">
+            <div class="obra-category-tag"><span class="sector-chip social"><i class="fas fa-search"></i> Investigación Social</span></div>
+            <img src="images/obra_social.jpg" alt="Centro Gumilla">
           </div>
           <div class="obra-body">
-            <h3>Parroquias y Casas de Retiro</h3>
-            <p>Parroquias vivas y espacios de silencio en la Casa de Espiritualidad Loyola para profundizar el discernimiento personal.</p>
-            <a href="directorio.html" class="obra-link">Ver parroquias y retiros <i class="fas fa-arrow-right"></i></a>
+            <h3>3. Centro Gumilla</h3>
+            <p>Centro de investigación y acción social. Editora de la Revista SIC y programas de liderazgo comunitario.</p>
+            <a href="https://www.gumilla.org" target="_blank" class="obra-link">Sitio Web Oficial <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </article>
+
+        <article class="obra-card">
+          <div class="obra-img-wrapper">
+            <div class="obra-category-tag"><span class="sector-chip pastoral"><i class="fas fa-pray"></i> Casa de Retiros</span></div>
+            <img src="images/obra_espiritualidad.jpg" alt="Casa Loyola">
+          </div>
+          <div class="obra-body">
+            <h3>4. Casa de Espiritualidad Loyola</h3>
+            <p>Ubicada en Los Teques. Espacio para Ejercicios Espirituales en el silencio, retiros y talleres de discernimiento.</p>
+            <a href="directorio.html" class="obra-link">Ver Casa de Retiros <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Feed de Instagram Integrado (Simulado con imágenes del usuario) -->
+  <section class="instagram-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge"><i class="fab fa-instagram" style="color: var(--accent-orange);"></i> @jesuitasvenezuela</span>
+        <h2 class="section-title">Síguenos en Instagram</h2>
+        <p class="section-description">Mantente conectado con nuestras publicaciones, oraciones diarias y actividades apostólicas.</p>
+      </div>
+
+      <div class="instagram-feed-grid">
+        <article class="ig-card">
+          <img src="images/ig1.png" alt="Publicación Instagram Jesuitas Venezuela 1">
+          <div class="ig-overlay">
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-yellow);"><i class="fab fa-instagram"></i> Instagram</span>
+            <p style="font-size: 0.9rem; font-weight: 700; margin-top: 4px;">Reflexión y acompañamiento en nuestras obras en Venezuela.</p>
+          </div>
+        </article>
+
+        <article class="ig-card">
+          <img src="images/ig2.png" alt="Publicación Instagram Jesuitas Venezuela 2">
+          <div class="ig-overlay">
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-yellow);"><i class="fab fa-instagram"></i> Instagram</span>
+            <p style="font-size: 0.9rem; font-weight: 700; margin-top: 4px;">Formación integral y fe viva en la comunidad.</p>
+          </div>
+        </article>
+
+        <article class="ig-card">
+          <img src="images/ig3.png" alt="Publicación Instagram Jesuitas Venezuela 3">
+          <div class="ig-overlay">
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-yellow);"><i class="fab fa-instagram"></i> Instagram</span>
+            <p style="font-size: 0.9rem; font-weight: 700; margin-top: 4px;">Oración diaria y discernimiento ignaciano.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="https://instagram.com" target="_blank" class="btn-primary" style="background-color: var(--accent-orange); border-color: var(--accent-orange);">
+          <i class="fab fa-instagram"></i> Ver más en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redesigned Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Logo + Contact Info + Socials -->
         <div class="footer-brand">
-          <h2>JESUITAS VENEZUELA</h2>
+          <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="footer-logo-img">
           <p>
             Compañía de Jesús - Provincia de Venezuela.<br>
             Construyendo caminos de fe, educación, justicia y reconciliación.
           </p>
+          <div class="footer-contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Esquina de Mijares a Alcabala, Centro de Caracas.</span>
+            <span><i class="fas fa-phone"></i> +58 (212) 564-1234 / 564-5678</span>
+            <span><i class="fas fa-envelope"></i> contacto@jesuitas.org.ve</span>
+          </div>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
 
+        <!-- Navigation Divided in 2 Columns -->
         <div>
-          <h3 class="footer-title">Navegación</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-            <li><a href="index.html#obras">Apostolados</a></li>
-            <li><a href="directorio.html">Directorio Obras</a></li>
-            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
-            <li><a href="recursos.html">Recursos & Medios</a></li>
-            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
-            <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
-            <li><a href="donar.html">Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
+          <h3 class="footer-title">Navegación del Portal</h3>
+          <div class="footer-nav-two-columns">
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+              <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+              <li><a href="directorio.html">Directorio Obras</a></li>
+              <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="recursos.html">Recursos & Medios</a></li>
+              <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
+              <li><a href="donar.html">Donaciones</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
         </div>
 
+        <!-- White Card for Newsletter + Colaborar Button -->
         <div>
-          <h3 class="footer-title">Instituciones</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
-            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
-            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
-          </ul>
-        </div>
+          <div class="footer-newsletter-card">
+            <h3>Suscríbete al Boletín</h3>
+            <p>Recibe noticias, boletines y reflexiones ignacianas en tu correo.</p>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+              <input type="email" placeholder="Tu correo electrónico" required>
+              <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+                Suscribirme
+              </button>
+            </form>
 
-        <div>
-          <h3 class="footer-title">Suscríbete al Boletín</h3>
-          <p style="font-size: 0.85rem; margin-bottom: 15px;">Recibe noticias y reflexiones ignacianas en tu correo.</p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte al boletín de los Jesuitas en Venezuela!');">
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px;">
-              Suscribirme
-            </button>
-          </form>
+            <div style="margin-top: 15px; text-align: center;">
+              <a href="donar.html" class="btn-primary" style="width: 100%; justify-content: center; background-color: var(--accent-orange); border-color: var(--accent-orange); font-size: 0.85rem;">
+                <i class="fas fa-heart"></i> Colaborar con la Misión
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
-        <div class="amdg-tag">A.M.D.G.</div>
+        <div>
+          &copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacidad.html">Política de Privacidad</a> |
+          <a href="cookies.html">Política de Cookies</a>
+        </div>
+        <div class="amdg-tag">
+          A.M.D.G. (Ad Maiorem Dei Gloriam)
+        </div>
       </div>
     </div>
   </footer>

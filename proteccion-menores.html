@@ -32,21 +32,22 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="brand-logo">
-          <div class="brand-symbol">IHS</div>
-          <div class="brand-text">
-            <h1>JESUITAS</h1>
-            <span>VENEZUELA</span>
-          </div>
+          <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="brand-logo-img">
         </a>
 
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-          <li><a href="index.html#obras">Apostolados</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="quienes-somos.html" class="nav-link">Quiénes Somos <i class="fas fa-chevron-down opacity-75 fs-xs ms-1"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+              <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            </ul>
+          </li>
+          <li><a href="directorio.html">Apostolados</a></li>
           <li><a href="directorio.html">Directorio Obras</a></li>
           <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
           <li><a href="recursos.html">Recursos</a></li>
-          <li><a href="historia-impacto.html">Historia</a></li>
           <li><a href="proteccion-menores.html" class="active">Entorno Seguro</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
@@ -60,7 +61,7 @@
   </header>
 
   <!-- Hero Entorno Seguro -->
-  <section class="hero-section" style="min-height: 55vh; background: linear-gradient(rgba(40, 1, 6, 0.88), rgba(29, 27, 27, 0.92)), url('images/obra_educacion.jpg') center/cover no-repeat;">
+  <section class="hero-section" style="min-height: 55vh; background: linear-gradient(rgba(40, 1, 6, 0.45), rgba(29, 27, 27, 0.6)), url('images/obra_educacion.jpg') center/cover no-repeat;">
     <div class="container">
       <div class="hero-content">
         <div class="hero-tag">
@@ -251,49 +252,80 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h2>JESUITAS VENEZUELA</h2>
-          <p>Compañía de Jesús - Provincia de Venezuela.<br>Comisión de Entorno Seguro.</p>
+  <footer class="main-footer pt-5 pb-4">
+    <div class="container container-custom">
+      <div class="row g-4 align-items-start pb-4 border-bottom border-light-subtle">
+        <!-- Col 1: Logo & Contact Info -->
+        <div class="col-lg-4 col-md-6 me-auto">
+          <a href="index.html" class="footer-brand d-inline-block mb-3">
+            <img src="images/Jesuitas_Venezuela_id68woPJPy_1.png" alt="Jesuitas Venezuela" class="footer-logo-img mb-2">
+            <span class="d-block text-white opacity-75 small">Compañía de Jesús - Provincia de Venezuela</span>
+          </a>
+          <p class="text-white-50 small mb-3">
+            Construyendo caminos de fe, educación, justicia y reconciliación en toda Venezuela.
+          </p>
+          <div class="contact-info text-white-50 small">
+            <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-gold"></i> Av. Palo Grande con Caura, Quinta Canisius, Prados del Este, Caracas 1080</p>
+            <p class="mb-1"><i class="fas fa-envelope me-2 text-gold"></i> curia@jesuitasvenezuela.org</p>
+            <p class="mb-3"><i class="fas fa-phone me-2 text-gold"></i> +58 (212) 976-1233 / 976-4511</p>
+          </div>
+          <div class="social-links d-flex gap-2">
+            <a href="https://www.instagram.com/jesuitasvenezuela/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/JesuitasVzla" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/JesuitasVenezuela/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@JesuitasVenezuela" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
 
-        <div>
-          <h3 class="footer-title">Navegación</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-            <li><a href="index.html#obras">Apostolados</a></li>
-            <li><a href="directorio.html">Directorio Obras</a></li>
-            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
-            <li><a href="recursos.html">Recursos & Medios</a></li>
-            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
-            <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
-            <li><a href="donar.html">Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
+        <!-- Col 2: Navigation (2 columns) -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading text-white fw-bold mb-3">Navegación</h5>
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-unstyled footer-links mb-0">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+                <li><a href="directorio.html">Apostolados</a></li>
+                <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled footer-links mb-0">
+                <li><a href="recursos.html">Recursos & Medios</a></li>
+                <li><a href="proteccion-menores.html">Entorno Seguro</a></li>
+                <li><a href="donar.html">Donaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h3 class="footer-title">Instituciones</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
-            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
-            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-title">Comisión Entorno Seguro</h3>
-          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
-          <p style="font-size: 0.85rem; color: var(--secondary-container);">entornoseguro@jesuitas.org.ve</p>
+        <!-- Col 3: White Card Newsletter -->
+        <div class="col-lg-3 col-md-12">
+          <div class="footer-card bg-white p-4 text-dark shadow-sm">
+            <h5 class="fw-bold mb-2 text-dark">Suscríbete al Boletín</h5>
+            <p class="small text-muted mb-3">Recibe noticias y reflexiones ignacianas en tu correo.</p>
+            <form class="mb-3">
+              <input type="email" class="form-control form-control-sm mb-2" placeholder="Tu correo electrónico" required>
+              <button type="submit" class="btn btn-primary btn-sm w-100 fw-semibold">SUSCRIBIRME</button>
+            </form>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="text-center">
+              <p class="small text-muted mb-2">¿Deseas apoyar nuestros proyectos?</p>
+              <a href="donar.html" class="btn btn-outline-primary btn-sm w-100 fw-bold">COLABORAR</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
-        <div class="amdg-tag">A.M.D.G.</div>
+      <!-- Footer Bottom -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 text-white-50 small">
+        <p class="mb-2 mb-md-0">&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="privacidad.html" class="text-white-50 me-3 text-decoration-none">Políticas de Privacidad</a>
+          <a href="cookies.html" class="text-white-50 text-decoration-none">Políticas de Cookies</a>
+        </div>
       </div>
     </div>
   </footer>
