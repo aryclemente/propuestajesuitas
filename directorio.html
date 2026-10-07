@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio y Buscador de Obras | Jesuitas Venezuela</title>
+  <meta name="description" content="Directorio nacional interactivo de instituciones educacionales, parroquias, centros sociales y casas de retiros de la Compañía de Jesús en Venezuela.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-map-marker-alt" style="color: var(--secondary-container);"></i> Red Nacional de Obras Apostólicas</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> contacto@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Red Apostólica:</span>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html" class="active">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 50vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/obra_educacion.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-map-marked-alt"></i> Red Nacional Apostólica
+        </div>
+        <h1 class="hero-title">Directorio de <span>Obras e Instituciones</span></h1>
+        <p class="hero-description">
+          Localiza y contacta los colegios, universidades, parroquias, comedores populares, centros de investigación y casas de espiritualidad de los Jesuitas en Venezuela.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section directory-section">
+    <div class="container">
+      <div class="directory-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="directorySearch" placeholder="Buscar obra, institución, ciudad o palabra clave (ej: UCAB, Fe y Alegría, San Ignacio)...">
+        </div>
+
+        <select id="directoryCategory" class="filter-select">
+          <option value="all">Todos los Sectores Apostólicos</option>
+          <option value="educacion">Sector Educación / Fe y Alegría</option>
+          <option value="colegios">Colegios Ignacianos</option>
+          <option value="parroquias">Sector Pastoral / Parroquias</option>
+          <option value="social">Sector Social / JRS</option>
+          <option value="espiritualidad">Casas de Retiro</option>
+          <option value="pastoral">Movimiento Juvenil</option>
+        </select>
+
+        <select id="directoryState" class="filter-select">
+          <option value="all">Todos los Estados</option>
+          <option value="Caracas">Caracas (Distrito Capital)</option>
+          <option value="Bolívar">Bolívar (Guayana)</option>
+          <option value="Zulia">Zulia</option>
+          <option value="Lara">Lara</option>
+          <option value="Miranda">Miranda</option>
+          <option value="Táchira">Táchira</option>
+          <option value="Mérida">Mérida</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+        <span style="font-size: 0.85rem; font-weight: 700; align-self: center; color: var(--text-muted);">Filtrar por sector:</span>
+        <button class="sector-chip educacion" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='educacion'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
+          <i class="fas fa-graduation-cap"></i> Educación
+        </button>
+        <button class="sector-chip social" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='social'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
+          <i class="fas fa-hands-helping"></i> Social
+        </button>
+        <button class="sector-chip pastoral" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='parroquias'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
+          <i class="fas fa-church"></i> Parroquias
+        </button>
+        <button class="sector-chip juventud" style="cursor: pointer; border: none;" onclick="document.getElementById('directoryCategory').value='pastoral'; document.getElementById('directoryCategory').dispatchEvent(new Event('change'));">
+          <i class="fas fa-users"></i> Juventud
+        </button>
+      </div>
+
+      <div class="directory-results" id="directoryResults">
+        <!-- JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Red Apostólica Nacional.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Instituciones</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
+            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
+            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">contacto@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

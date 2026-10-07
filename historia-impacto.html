@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia e Impacto Provincial | Jesuitas Venezuela</title>
+  <meta name="description" content="Línea de tiempo e impacto social y educativo de la Compañía de Jesús durante más de 100 años en Venezuela.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .timeline { position: relative; max-width: 900px; margin: 40px auto 0 auto; padding: 20px 0; }
+    .timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: var(--border-strong); transform: translateX(-50%); }
+    .timeline-item { position: relative; width: 50%; padding: 20px 40px; box-sizing: border-box; }
+    .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+    .timeline-item:nth-child(even) { left: 50%; text-align: left; }
+    .timeline-dot { position: absolute; top: 30px; width: 20px; height: 20px; background: var(--primary-sanguine); border-radius: 50%; border: 4px solid var(--surface-pure); box-shadow: var(--elevation-1); }
+    .timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
+    .timeline-item:nth-child(even) .timeline-dot { left: -10px; }
+    .timeline-content { background: var(--surface-pure); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1); }
+    .timeline-year { font-size: 1.4rem; font-weight: 700; color: var(--primary-sanguine); font-family: var(--font-serif); margin-bottom: 6px; }
+    @media (max-width: 768px) {
+      .timeline::before { left: 20px; }
+      .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 50px; }
+      .timeline-dot { left: 10px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-history" style="color: var(--secondary-container);"></i> Más de 100 Años Acompañando a Venezuela (1916 - 2026)</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> curia@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Memoria Histórica</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="historia-impacto.html" class="active">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 55vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/hero_banner.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-monument"></i> Memoria Apostólica
+        </div>
+        <h1 class="hero-title">Historia e <span>Impacto en Venezuela</span></h1>
+        <p class="hero-description">
+          Desde el regreso de los Jesuitas a Venezuela en 1916 hasta la consolidación de la red educativa y social más amplia del país, una trayectoria guiada por el servicio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Impacto Consolidado</span>
+        <h2 class="section-title">Huella de la Provincia de Venezuela</h2>
+        <p class="section-description">Cifras que reflejan el compromiso continuo con el desarrollo de la sociedad venezolana.</p>
+      </div>
+
+      <div class="stats-grid" style="box-shadow: var(--elevation-1);">
+        <div class="stat-item">
+          <div class="stat-number">1916</div>
+          <div class="stat-label">Año de Restablecimiento en Venezuela</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">175+</div>
+          <div class="stat-label">Planteles de Fe y Alegría</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">70.000+</div>
+          <div class="stat-label">Egresados Universitarios de la UCAB</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Estados con Presencia Apostólica</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--surface-container-low); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Cronología Histórica</span>
+        <h2 class="section-title">Hitos de la Misión Jesuita (1916 - 2026)</h2>
+        <p class="section-description">Momentos trascendentales en la construcción de obras para Venezuela.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">1916</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Llegada de los Jesuitas</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Reapertura de la misión jesuita en Caracas asumida por la provincia de Castilla, reanudando la presencia religiosa en el país.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">1923</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Fundación del Colegio San Ignacio</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Apertura del histórico Colegio San Ignacio en Caracas, referente de formación humana y valores ignacianos.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">1953</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Fundación de la UCAB</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Apertura de la Universidad Católica Andrés Bello en la esquina de Jesuitas en el centro de Caracas, posteriormente trasladada a Montalbán.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">1955</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Nacimiento de Fe y Alegría</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">El P. José María Vélaz, S.J. inicia la primera escuela en una casita regalada en el 23 de Enero de Caracas. Hoy es un movimiento global.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">1968</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Fundación del Centro Gumilla</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Creación del centro de investigación y acción social para el análisis crítico de la realidad sociopolítica venezolana.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <h4 style="font-family: var(--font-serif); margin-bottom: 6px;">Rediseño y Consolidación Digital</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Fortalecimiento del ecosistema apostólico y rediseño digital para responder a las nuevas fronteras de Venezuela.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Memoria e Historia Provincial.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Instituciones</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
+            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
+            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">curia@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

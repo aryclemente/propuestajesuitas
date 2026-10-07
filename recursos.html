@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Medios y Recursos | Jesuitas Venezuela</title>
+  <meta name="description" content="Escucha homilías en audio, podcasts ignacianos, boletines descargables en PDF y reflexiones de la Provincia de Venezuela.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .audio-player-card { background: var(--surface-pure); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--elevation-2); border-top: 4px solid var(--primary-sanguine); margin-bottom: 40px; }
+    .player-controls { display: flex; align-items: center; gap: 16px; margin-top: 15px; }
+    .btn-play { width: 48px; height: 48px; border-radius: 50%; background: var(--primary-sanguine); color: #FFF; border: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; transition: var(--transition); flex-shrink: 0; }
+    .btn-play:hover { background: var(--primary-dark); transform: scale(1.05); }
+    .progress-bar-container { flex: 1; height: 6px; background: var(--surface-container-high); border-radius: 4px; position: relative; cursor: pointer; }
+    .progress-bar-fill { width: 35%; height: 100%; background: var(--primary-sanguine); border-radius: 4px; }
+    .resource-download-card { background: var(--surface-pure); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+    .resource-download-card:hover { border-color: var(--primary-sanguine); box-shadow: var(--elevation-1); }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-podcast" style="color: var(--secondary-container);"></i> Centro de Medios e Información Ignaciana</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> comunicaciones@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Canales:</span>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+          <li><a href="recursos.html" class="active">Recursos</a></li>
+          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 50vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/hero_banner.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-headphones"></i> Podcasts, Homilías y Publicaciones
+        </div>
+        <h1 class="hero-title">Centro de <span>Medios y Recursos</span></h1>
+        <p class="hero-description">
+          Espacio dedicado a la difusión de homilías semanales en audio, boletines institucionales descargables en PDF y materiales de oración y reflexión ignaciana.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Audio y Podcasts Ignacianos</span>
+        <h2 class="section-title">Homilía Dominical y Reflexión Semanal</h2>
+        <p class="section-description">Escucha o descarga las reflexiones en voz de los sacerdotes jesuitas de la Provincia de Venezuela.</p>
+      </div>
+
+      <div class="audio-player-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
+          <div>
+            <span class="sector-chip pastoral" style="margin-bottom: 8px;">Homilía Semanal</span>
+            <h3 style="font-size: 1.4rem; margin: 4px 0; font-family: var(--font-serif);">Discernir la esperanza en la vida cotidiana</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);"><i class="fas fa-user-circle"></i> P. Provincial | Duración: 14 min | 4 de Octubre, 2026</p>
+          </div>
+          <button class="btn-primary" style="padding: 8px 16px; font-size: 0.8rem;" onclick="alert('Iniciando descarga directa del audio en MP3...');">
+            <i class="fas fa-download"></i> Descargar Audio MP3
+          </button>
+        </div>
+
+        <div class="player-controls">
+          <button class="btn-play" id="playBtn" onclick="toggleAudio()"><i class="fas fa-play" id="playIcon"></i></button>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary-sanguine);" id="timeDisplay">04:45 / 14:20</span>
+        </div>
+      </div>
+
+      <div class="obras-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="obra-card" style="padding: 24px;">
+          <span class="sector-chip pastoral" style="margin-bottom: 8px; width: fit-content;">Podcast Episodio 12</span>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px; font-family: var(--font-serif);">Ejercicios en la vida diaria (EVD)</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 15px;">Cómo mantener un ritmo de oración constante en medio de las ocupaciones laborales.</p>
+          <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem; width: fit-content;" onclick="alert('Reproduciendo podcast...');">
+            <i class="fas fa-play"></i> Escuchar Episodio
+          </button>
+        </div>
+
+        <div class="obra-card" style="padding: 24px;">
+          <span class="sector-chip educacion" style="margin-bottom: 8px; width: fit-content;">Foro Educativo</span>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px; font-family: var(--font-serif);">La UCAB y el futuro laboral en Venezuela</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 15px;">Panel con académicos sobre emprendimiento, tecnología y ética profesional.</p>
+          <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem; width: fit-content;" onclick="alert('Reproduciendo conferencia...');">
+            <i class="fas fa-play"></i> Escuchar Conferencia
+          </button>
+        </div>
+
+        <div class="obra-card" style="padding: 24px;">
+          <span class="sector-chip social" style="margin-bottom: 8px; width: fit-content;">Centro Gumilla</span>
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px; font-family: var(--font-serif);">Análisis de Coyuntura Social 2026</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 15px;">Entrevista con el equipo de investigación comunitaria del Centro Gumilla.</p>
+          <button class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem; width: fit-content;" onclick="alert('Reproduciendo entrevista...');">
+            <i class="fas fa-play"></i> Escuchar Entrevista
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--surface-container-low); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Biblioteca Digital</span>
+        <h2 class="section-title">Boletines y Cartas Pastorales (PDF)</h2>
+        <p class="section-description">Descarga directa de documentos institucionales de la Provincia de Venezuela.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 900px; margin: 0 auto;">
+        <div class="resource-download-card">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="font-size: 2rem; color: var(--primary-sanguine);"><i class="fas fa-file-pdf"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-family: var(--font-serif); margin-bottom: 4px;">Boletín Informativo Provincial — Octubre 2026</h4>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">PDF | 2.4 MB | Publicado el 1 de Octubre, 2026</span>
+            </div>
+          </div>
+          <button class="btn-primary" style="padding: 8px 16px; font-size: 0.82rem;" onclick="alert('Iniciando descarga del PDF...');">
+            <i class="fas fa-download"></i> Descargar PDF
+          </button>
+        </div>
+
+        <div class="resource-download-card">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="font-size: 2rem; color: var(--primary-sanguine);"><i class="fas fa-file-pdf"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-family: var(--font-serif); margin-bottom: 4px;">Revista SIC — Edición Especial Red Social</h4>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">PDF | 5.1 MB | Centro Gumilla</span>
+            </div>
+          </div>
+          <button class="btn-primary" style="padding: 8px 16px; font-size: 0.82rem;" onclick="alert('Iniciando descarga del PDF...');">
+            <i class="fas fa-download"></i> Descargar PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Centro de Medios y Recursos.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Instituciones</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
+            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
+            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">comunicaciones@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    let isPlaying = false;
+    function toggleAudio() {
+      const btn = document.getElementById('playIcon');
+      const fill = document.getElementById('progressFill');
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        btn.className = 'fas fa-pause';
+        fill.style.width = '65%';
+      } else {
+        btn.className = 'fas fa-play';
+      }
+    }
+  </script>
+</body>
+</html>

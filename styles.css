@@ -1,0 +1,1035 @@
+/* -------------------------------------------------------------------------- */
+/* JESUITAS VENEZUELA - STITCH DESIGN SYSTEM                                   */
+/* Design Theme: "Sober Dignity & Apostolic Service"                          */
+/* -------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+
+:root {
+  /* Stitch Color System - Primary Brand Palette */
+  --primary-sanguine: #803030;       /* Sanguine Brown / Marrón Sanguíneo Ignaciano */
+  --primary-dark: #5A2222;           /* Tertiary / Pressed & Footer */
+  --primary-deep: #400106;           /* Deep On-Primary Fixed */
+  --secondary-coral: #825151;        /* Soft Companion */
+  --secondary-light: #AD7676;        /* Subtle Highlight */
+  --secondary-container: #FFBFBE;
+
+  /* Surfaces & Backgrounds */
+  --bg-main: #FEF8F7;                /* Warm Ivory Background */
+  --surface-pure: #FFFFFF;           /* Pure White Container */
+  --surface-subtle: #FBF8F6;
+  --surface-container-low: #F8F2F2;
+  --surface-container: #F3ECEC;
+  --surface-container-high: #EDE7E6;
+  --surface-muted: #F3ECE8;
+  
+  /* Text & Typography Neutral */
+  --text-on-surface: #1D1B1B;        /* Deep Warm Charcoal Black */
+  --text-muted: #554241;             /* On-Surface Variant */
+  --text-inverse: #FFFFFF;
+  
+  /* Hairline Borders */
+  --border-subtle: #E5DDD8;
+  --border-strong: #C5B9B3;
+  --outline-variant: #DBC1BF;
+
+  /* Apostolic Sector Coding (STITCH SPEC) */
+  --sector-social: #B6BD00;          /* Fe y Alegría, Bienestar y Derechos Humanos */
+  --sector-educacion: #0065A0;       /* UCAB, IUJO y Colegios Ignacianos */
+  --sector-pastoral: #EE8906;        /* Ejercicios Espirituales, Parroquias y Retiros */
+  --sector-juventud: #A3007D;        /* Movimiento Huellas y Pastoral Juvenil */
+
+  /* Stitch Typography Tokens */
+  --font-serif: 'Cardo', serif;      /* Academic & Ignatian Dignity Serif */
+  --font-sans: 'Lato', sans-serif;   /* Humanist UI & Body Sans */
+
+  /* Stitch Radii Tokens */
+  --radius-sm: 0.25rem;              /* 4px - Inputs & Buttons */
+  --radius-md: 0.5rem;               /* 8px - Cards & Panels */
+  --radius-lg: 0.75rem;              /* 12px - Modals & Banners */
+  --radius-pill: 9999px;             /* Sector Chips & Badges */
+
+  /* Stitch Shadows & Elevation */
+  --elevation-0: none;
+  --elevation-1: 0 2px 6px rgba(128, 48, 48, 0.04);
+  --elevation-2: 0 4px 16px -2px rgba(128, 48, 48, 0.08);
+  --elevation-3: 0 12px 32px -4px rgba(29, 27, 27, 0.12);
+  --transition: all 0.25s ease-in-out;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-on-surface);
+  background-color: var(--bg-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--primary-sanguine);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH TOP ANNOUNCEMENT BAR                                               */
+/* -------------------------------------------------------------------------- */
+.top-bar {
+  background-color: var(--primary-dark);
+  color: var(--surface-container-low);
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--primary-sanguine);
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-info {
+  display: flex;
+  gap: 20px;
+}
+
+.top-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.top-actions a:hover {
+  color: var(--secondary-container);
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH HEADER & NAVIGATION                                                 */
+/* -------------------------------------------------------------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--surface-pure);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--elevation-1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Stitch Brand Seal Rule: IHS Monogram on solid primary reserve */
+.brand-symbol {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-sanguine);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.brand-text h1 {
+  font-size: 1.3rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: var(--primary-sanguine);
+}
+
+.brand-text span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-family: var(--font-sans);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-on-surface);
+  position: relative;
+  padding: 6px 0;
+  font-family: var(--font-sans);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-sanguine);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.btn-donate-nav {
+  background-color: var(--primary-sanguine);
+  color: #FFFFFF !important;
+  padding: 10px 22px !important;
+  border-radius: var(--radius-sm);
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--primary-sanguine);
+}
+
+.btn-donate-nav::after {
+  display: none !important;
+}
+
+.btn-donate-nav:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-sanguine);
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH HERO SECTION                                                        */
+/* -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(40, 1, 6, 0.8), rgba(29, 27, 27, 0.88)),
+              url('images/hero_banner.jpg') center/cover no-repeat;
+  color: #FFFFFF;
+  border-bottom: 3px solid var(--primary-sanguine);
+}
+
+.hero-content {
+  max-width: 780px;
+  z-index: 2;
+  padding: 60px 0;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  font-family: var(--font-serif);
+}
+
+.hero-title span {
+  color: var(--secondary-container);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--surface-container);
+  margin-bottom: 36px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Stitch Primary Button Specification */
+.btn-primary {
+  background-color: var(--primary-sanguine);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--primary-sanguine);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #FFFFFF;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH STATS SECTION                                                       */
+/* -------------------------------------------------------------------------- */
+.stats-section {
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 80px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  background: var(--surface-pure);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-2);
+  border: 1px solid var(--border-subtle);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background-color: var(--border-subtle);
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-sanguine);
+  margin-bottom: 4px;
+  font-family: var(--font-serif);
+}
+
+.stat-number span {
+  color: var(--secondary-coral);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* SECTIONS & TYPOGRAPHY RHYTHM                                               */
+/* -------------------------------------------------------------------------- */
+.section {
+  padding: 85px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 55px auto;
+}
+
+.subtitle-badge {
+  color: var(--primary-sanguine);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: var(--font-serif);
+  color: var(--primary-sanguine);
+}
+
+.section-description {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-family: var(--font-sans);
+}
+
+/* -------------------------------------------------------------------------- */
+/* APOSTOLIC SECTOR CODIFICATION (STITCH CHIPS & CARDS)                      */
+/* -------------------------------------------------------------------------- */
+.sector-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-sans);
+}
+
+.sector-chip.educacion {
+  background-color: rgba(0, 101, 160, 0.12);
+  color: var(--sector-educacion);
+  border: 1px solid rgba(0, 101, 160, 0.3);
+}
+
+.sector-chip.social {
+  background-color: rgba(182, 189, 0, 0.15);
+  color: #696D00;
+  border: 1px solid rgba(182, 189, 0, 0.4);
+}
+
+.sector-chip.pastoral {
+  background-color: rgba(238, 137, 6, 0.12);
+  color: var(--sector-pastoral);
+  border: 1px solid rgba(238, 137, 6, 0.3);
+}
+
+.sector-chip.juventud {
+  background-color: rgba(163, 0, 125, 0.12);
+  color: var(--sector-juventud);
+  border: 1px solid rgba(163, 0, 125, 0.3);
+}
+
+.obras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.obra-card {
+  background: var(--surface-pure);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.obra-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--elevation-2);
+}
+
+.obra-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.obra-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.obra-card:hover .obra-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.obra-category-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.obra-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.obra-body h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+}
+
+.obra-body p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.obra-link {
+  color: var(--primary-sanguine);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.obra-link:hover {
+  color: var(--primary-dark);
+  gap: 12px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH DIRECTORY COMPONENT (Directorio de Obras)                           */
+/* -------------------------------------------------------------------------- */
+.directory-section {
+  background: var(--surface-container-low);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.directory-controls {
+  background: var(--surface-pure);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 35px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 2;
+  min-width: 260px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 18px 12px 42px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  outline: none;
+  background-color: var(--surface-pure);
+  color: var(--text-on-surface);
+}
+
+.search-box input:focus {
+  border-color: var(--primary-sanguine);
+  box-shadow: 0 0 0 2px rgba(128, 48, 48, 0.15);
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.filter-select {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  outline: none;
+  background-color: var(--surface-pure);
+  color: var(--text-on-surface);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.directory-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.directory-item {
+  background: var(--surface-pure);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--primary-sanguine);
+  transition: var(--transition);
+}
+
+.directory-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--elevation-2);
+}
+
+.dir-title {
+  font-size: 1.15rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+}
+
+.dir-location {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.dir-contact {
+  font-size: 0.85rem;
+  color: var(--primary-sanguine);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
+/* NOTICIAS Y AGENDA                                                          */
+/* -------------------------------------------------------------------------- */
+.news-events-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 35px;
+}
+
+@media (max-width: 992px) {
+  .news-events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-card-featured {
+  background: var(--surface-pure);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--elevation-1);
+  margin-bottom: 24px;
+  border: 1px solid var(--border-subtle);
+}
+
+.news-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.news-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.news-list-small {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-item-small {
+  background: var(--surface-pure);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition);
+}
+
+.news-item-small:hover {
+  border-color: var(--primary-sanguine);
+  box-shadow: var(--elevation-2);
+}
+
+.event-card {
+  background: var(--surface-pure);
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.event-date-box {
+  background: var(--primary-sanguine);
+  color: #FFFFFF;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  min-width: 65px;
+}
+
+.event-date-box .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--font-serif);
+}
+
+.event-date-box .month {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.event-info h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-family: var(--font-serif);
+}
+
+.event-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------------- */
+/* DONACIONES & BANNER INSTITUCIONAL                                         */
+/* -------------------------------------------------------------------------- */
+.donation-banner {
+  background: linear-gradient(135deg, var(--primary-sanguine), var(--primary-dark));
+  color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 55px 40px;
+  box-shadow: var(--elevation-3);
+  border: 1px solid var(--primary-dark);
+}
+
+.donation-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .donation-banner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.donation-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.amount-options {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.amount-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.amount-btn.active, .amount-btn:hover {
+  background: #FFFFFF;
+  color: var(--primary-sanguine);
+  border-color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER                                                                     */
+/* -------------------------------------------------------------------------- */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--surface-container-high);
+  padding-top: 75px;
+  padding-bottom: 30px;
+  border-top: 4px solid var(--primary-sanguine);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand h2 {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  font-family: var(--font-serif);
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--secondary-light);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--surface-container-high);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+  padding-left: 5px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.amdg-tag {
+  font-family: var(--font-serif);
+  color: var(--secondary-container);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STITCH MODALS                                                              */
+/* -------------------------------------------------------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 27, 27, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--surface-pure);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  box-shadow: var(--elevation-3);
+  border: 1px solid var(--border-subtle);
+  border-top: 4px solid var(--primary-sanguine);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.modal-close:hover {
+  color: var(--primary-sanguine);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-dark);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    color: #FFFFFF;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .stats-section {
+    margin-top: -30px;
+  }
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ser Jesuita | Vocaciones Jesuitas Venezuela</title>
+  <meta name="description" content="Descubre la vocación ignaciana y las etapas de formación para ser un sacerdote o hermano jesuita en la Compañía de Jesús en Venezuela.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .stepper-container { display: flex; flex-direction: column; gap: 24px; position: relative; margin-top: 30px; }
+    .stepper-step { background: var(--surface-pure); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 28px; display: flex; gap: 24px; box-shadow: var(--elevation-1); transition: var(--transition); border-left: 4px solid var(--primary-sanguine); }
+    .stepper-step:hover { transform: translateX(6px); box-shadow: var(--elevation-2); }
+    .step-number { width: 50px; height: 50px; background: var(--primary-sanguine); color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; font-family: var(--font-serif); flex-shrink: 0; }
+    .step-content h3 { font-size: 1.35rem; margin-bottom: 8px; font-family: var(--font-serif); }
+    .step-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-cross" style="color: var(--secondary-container);"></i> Promotor Vocacional de la Provincia de Venezuela</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> vocaciones@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Red Vocacional:</span>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html" class="active">Ser Jesuita</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 60vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/obra_espiritualidad.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-compass"></i> Acompañamiento y Discernimiento
+        </div>
+        <h1 class="hero-title">¿Sientes el llamado a <span>Ser Jesuita</span>?</h1>
+        <p class="hero-description">
+          Ser jesuita es una forma de seguir a Jesucristo comprometidos con las realidades de nuestro tiempo, entregando la vida en el servicio a los demás a través de la fe y la justicia.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#etapas" class="btn-primary">
+            Conoce el Camino de Formación <i class="fas fa-arrow-down"></i>
+          </a>
+          <a href="#contacto-vocacional" class="btn-secondary">
+            <i class="fas fa-comments"></i> Contactar Promotor
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">El Estilo de Vida Ignaciano</span>
+        <h2 class="section-title">Contemplativos en la Acción</h2>
+        <p class="section-description">Un jesuita es un hombre llamado por Cristo para ser enviado a las fronteras geográficas y existenciales del mundo.</p>
+      </div>
+
+      <div class="obras-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="obra-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--primary-sanguine); margin-bottom: 15px;">
+            <i class="fas fa-heart-hands"></i>
+          </div>
+          <h3>Hermano o Sacerdote</h3>
+          <p>La Compañía integra a sacerdotes y a hermanos religiosos, viviendo la misma vocación en profunda hermandad comunitaria.</p>
+        </div>
+
+        <div class="obra-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--primary-sanguine); margin-bottom: 15px;">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>Vida en Comunidad</h3>
+          <p>Vivimos en comunidades fraternas donde compartimos la oración, los trabajos apostólicos y el apoyo mutuo diario.</p>
+        </div>
+
+        <div class="obra-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--primary-sanguine); margin-bottom: 15px;">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h3>Disponibilidad Apostólica</h3>
+          <p>Hacemos voto de obediencia para ser enviados a donde la necesidad humana o espiritual sea más urgente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="etapas" style="background-color: var(--surface-container-low); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Itinerario de Formación</span>
+        <h2 class="section-title">Las 6 Etapas para la Formación Jesuita</h2>
+        <p class="section-description">Un proceso integral de maduración humana, espiritual, académica y pastoral.</p>
+      </div>
+
+      <div class="stepper-container">
+        <div class="stepper-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <span class="sector-chip juventud" style="margin-bottom: 8px;">Etapa Previa</span>
+            <h3>Acogida y Discernimiento Vocacional</h3>
+            <p>Encuentros periódicos con el equipo vocacional, retiros de silencio y acompañamiento personal para clarificar las motivaciones y el llamado interior.</p>
+          </div>
+        </div>
+
+        <div class="stepper-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <span class="sector-chip pastoral" style="margin-bottom: 8px;">2 Años</span>
+            <h3>El Noviciado (Experiencia de Dios)</h3>
+            <p>Tiempo de inmersión en los Ejercicios Espirituales de 30 días, vida comunitaria y experimentos apostólicos en comunidades populares. Culmina con los Votos Perpetuos de Pobreza, Castidad y Obediencia.</p>
+          </div>
+        </div>
+
+        <div class="stepper-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <span class="sector-chip educacion" style="margin-bottom: 8px;">3 Años</span>
+            <h3>Estudios Humanísticos y Filosofía</h3>
+            <p>Formación filosófica y social integral en la Universidad Católica Andrés Bello (UCAB) para comprender el mundo contemporáneo con rigor analítico.</p>
+          </div>
+        </div>
+
+        <div class="stepper-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <span class="sector-chip social" style="margin-bottom: 8px;">2 Años</span>
+            <h3>El Magisterio (Práctica Apostólica)</h3>
+            <p>Trabajo a tiempo completo en una obra de la Compañía (profesor en colegios ignacianos, trabajo en Fe y Alegría, investigación en el Centro Gumilla o pastoral con refugiados).</p>
+          </div>
+        </div>
+
+        <div class="stepper-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <span class="sector-chip pastoral" style="margin-bottom: 8px;">3-4 Años</span>
+            <h3>Teología y Ordenación Sacerdotal</h3>
+            <p>Profundización teológica y pastoral. Para los ordenandos, esta etapa culmina con la Ordenación Diaconal y Sacerdotal al servicio de la Iglesia.</p>
+          </div>
+        </div>
+
+        <div class="stepper-step">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <span class="sector-chip pastoral" style="margin-bottom: 8px;">Última Etapa</span>
+            <h3>Tercera Probación y Votos Definitivos</h3>
+            <p>Tiempo de síntesis de la vida jesuita transcurridos varios años de trabajo activo, concluyendo con la incorporación definitiva a la Compañía de Jesús.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto-vocacional">
+    <div class="container">
+      <div style="max-width: 720px; margin: 0 auto; background: var(--surface-pure); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-2);">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <span class="subtitle-badge">Acompañamiento Confidencial</span>
+          <h2 style="font-size: 2rem; font-family: var(--font-serif); color: var(--primary-sanguine);">Escribe al Promotor Vocacional</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Si tienes inquietud espiritual o preguntas sobre el discernimiento, envíanos tu mensaje.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('¡Gracias por escribirnos! El equipo de Promoción Vocacional se pondrá en contacto contigo de forma confidencial.');">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Nombre Completo</label>
+              <input type="text" required placeholder="Tu nombre" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Edad</label>
+              <input type="number" required placeholder="Tu edad" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Correo Electrónico</label>
+              <input type="email" required placeholder="correo@ejemplo.com" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Ciudad / Estado</label>
+              <input type="text" required placeholder="Ej: Caracas, Mérida, Maracaibo" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Mensaje o Inquietud</label>
+            <textarea rows="4" required placeholder="Cuéntanos brevemente sobre tu búsqueda o preguntas..." style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem; font-family: var(--font-sans);"></textarea>
+          </div>
+
+          <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem;">
+            <i class="fas fa-paper-plane"></i> Enviar Mensaje Confidencial
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Promoción Vocacional.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto Vocacional</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">vocaciones@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

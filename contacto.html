@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Atención | Jesuitas Venezuela</title>
+  <meta name="description" content="Canales de atención directa, directorio de curia y atención por regiones de la Compañía de Jesús en Venezuela.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-headset" style="color: var(--secondary-container);"></i> Canales de Atención Institucional</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> contacto@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Curia Provincial Caracas</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 50vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/hero_banner.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-envelope-open-text"></i> Atención Institucional
+        </div>
+        <h1 class="hero-title">Contacto y <span>Atención Provincial</span></h1>
+        <p class="hero-description">
+          Ponte en contacto con la Curia Provincial, los coordinadores de los sectores apostólicos o las sedes regionales en Venezuela.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px;" class="contact-grid">
+        <div style="background: var(--surface-pure); padding: 36px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-2);">
+          <h3 style="font-size: 1.6rem; margin-bottom: 8px; font-family: var(--font-serif); color: var(--primary-sanguine);">Formulario de Mensaje Directo</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Selecciona el departamento al que deseas dirigir tu consulta:</p>
+
+          <form onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Tu consulta ha sido enviada al departamento seleccionado.');">
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">Departamento Destino</label>
+              <select style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem; background: #FFF;">
+                <option>Curia Provincial / Secretaría</option>
+                <option>Sector Educación (UCAB / Fe y Alegría / Colegios)</option>
+                <option>Sector Social (Centro Gumilla / JRS)</option>
+                <option>Sector Pastoral (Parroquias y Retiros)</option>
+                <option>Promoción Vocacional</option>
+                <option>Donaciones y Medios</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">Nombre Completo</label>
+                <input type="text" required placeholder="Tu nombre" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+              </div>
+
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">Teléfono de Contacto</label>
+                <input type="tel" placeholder="0414-0000000" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">Correo Electrónico</label>
+              <input type="email" required placeholder="correo@ejemplo.com" style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">Mensaje o Consulta</label>
+              <textarea rows="4" required placeholder="Escribe aquí los detalles de tu consulta..." style="width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 0.95rem; font-family: var(--font-sans);"></textarea>
+            </div>
+
+            <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.95rem;">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje Institucional
+            </button>
+          </form>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="background: var(--surface-pure); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-top: 4px solid var(--primary-sanguine);">
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px; font-family: var(--font-serif);"><i class="fas fa-building" style="color: var(--primary-sanguine);"></i> Curia Provincial (Caracas)</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 12px;">
+              <i class="fas fa-map-marker-alt" style="color: var(--primary-sanguine);"></i> Esquina de Mijares a Alcabala, Centro de Caracas. Caracas 1010, Distrito Capital.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 12px;">
+              <i class="fas fa-phone" style="color: var(--primary-sanguine);"></i> +58 (212) 564-1234 / 564-5678
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              <i class="fas fa-envelope" style="color: var(--primary-sanguine);"></i> curia@jesuitas.org.ve
+            </p>
+          </div>
+
+          <div style="background: var(--surface-pure); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-top: 4px solid var(--sector-educacion);">
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px; font-family: var(--font-serif);"><i class="fas fa-map-marked" style="color: var(--sector-educacion);"></i> Sedes Regionales</h3>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+              <li><strong>Guayana:</strong> UCAB Guayana, Puerto Ordaz</li>
+              <li><strong>Zulia:</strong> Colegio Gonzaga, Maracaibo</li>
+              <li><strong>Lara:</strong> Centro Loyola, Barquisimeto</li>
+              <li><strong>Táchira:</strong> Servicio Jesuita a Refugiados, San Cristóbal</li>
+              <li><strong>Mérida:</strong> Centro de Espiritualidad Loyola, Mérida</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Provincia de Venezuela.<br>Canales de Atención Institucional.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Instituciones</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
+            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
+            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto Directo</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">contacto@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

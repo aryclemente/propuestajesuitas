@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donaciones y Voluntariado | Jesuitas Venezuela</title>
+  <meta name="description" content="Apoya las obras educativas y sociales de la Compañía de Jesús en Venezuela a través de tu donación o voluntariado.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-heart" style="color: var(--secondary-container);"></i> Fondo de Solidaridad y Misión Venezuela</span>
+        <span><i class="fas fa-envelope" style="color: var(--secondary-container);"></i> donaciones@jesuitas.org.ve</span>
+      </div>
+      <div class="top-actions">
+        <span>Transparencia y Gestión</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-symbol">IHS</div>
+          <div class="brand-text">
+            <h1>JESUITAS</h1>
+            <span>VENEZUELA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="index.html#obras">Apostolados</a></li>
+          <li><a href="directorio.html">Directorio Obras</a></li>
+          <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="historia-impacto.html">Historia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="donar.html" class="btn-donate-nav active"><i class="fas fa-heart"></i> Colaborar</a></li>
+        </ul>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="min-height: 55vh; background: linear-gradient(rgba(40, 1, 6, 0.85), rgba(29, 27, 27, 0.9)), url('images/obra_social.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-hand-holding-heart"></i> Misión y Solidaridad
+        </div>
+        <h1 class="hero-title">Tu Generosidad <span>Construye Futuro</span></h1>
+        <p class="hero-description">
+          Con tu aporte económico o tu tiempo como voluntario, sostienes las becas de estudio en Fe y Alegría, los comedores comunitarios y el apoyo humanitario a miles de familias.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">¿A dónde va tu ayuda?</span>
+        <h2 class="section-title">Programas que Necesitan tu Apoyo</h2>
+        <p class="section-description">Selecciona la causa que deseas respaldar directamente en Venezuela.</p>
+      </div>
+
+      <div class="obras-grid">
+        <div class="obra-card" style="padding: 30px;">
+          <span class="sector-chip educacion" style="margin-bottom: 12px; width: fit-content;">Educación Popular</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 10px; font-family: var(--font-serif);">Becas Escolares Fe y Alegría</h3>
+          <p>Permite que un niño o joven de escasos recursos reciba útiles escolares, alimentación y educación técnica de calidad durante un año lectivo.</p>
+          <button class="btn-primary trigger-donate-modal" style="margin-top: 15px; font-size: 0.85rem; padding: 10px 18px;">
+            <i class="fas fa-heart"></i> Becar a un Estudiante
+          </button>
+        </div>
+
+        <div class="obra-card" style="padding: 30px;">
+          <span class="sector-chip social" style="margin-bottom: 12px; width: fit-content;">Acción Humanitaria</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 10px; font-family: var(--font-serif);">Comedores Comunitarios</h3>
+          <p>Financia platos de comida nutritiva diaria para niños y adultos mayores en sectores vulnerables de Caracas, Zulia y Lara.</p>
+          <button class="btn-primary trigger-donate-modal" style="margin-top: 15px; font-size: 0.85rem; padding: 10px 18px;">
+            <i class="fas fa-utensils"></i> Apoyar Comedores
+          </button>
+        </div>
+
+        <div class="obra-card" style="padding: 30px;">
+          <span class="sector-chip pastoral" style="margin-bottom: 12px; width: fit-content;">Espiritualidad & Misión</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 10px; font-family: var(--font-serif);">Fondo de Salud y Formación</h3>
+          <p>Contribuye al sostenimiento de los jesuitas ancianos y enfermos que entregaron su vida al servicio del país, y a la formación de los jóvenes novicios.</p>
+          <button class="btn-primary trigger-donate-modal" style="margin-top: 15px; font-size: 0.85rem; padding: 10px 18px;">
+            <i class="fas fa-medkit"></i> Aportar al Fondo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--surface-container-low); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle-badge">Canales Oficiales</span>
+        <h2 class="section-title">Métodos de Donación Nacional e Internacional</h2>
+        <p class="section-description">Realiza tu contribución de forma rápida, segura y transparente.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="background: var(--surface-pure); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-top: 4px solid var(--primary-sanguine);">
+          <div style="font-size: 1.8rem; color: var(--primary-sanguine); margin-bottom: 12px;"><i class="fas fa-university"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: var(--font-serif);">Donación por Zelle (USD)</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Ideal para transferencias desde Estados Unidos o cuentas internacionales en dólares.</p>
+          <div style="background: var(--surface-container-low); padding: 12px; border-radius: var(--radius-sm); font-size: 0.88rem;">
+            <strong>Correo Zelle:</strong> donaciones@jesuitas.org.ve<br>
+            <strong>Titular:</strong> Provincia de Venezuela Compañía de Jesús
+          </div>
+        </div>
+
+        <div style="background: var(--surface-pure); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-top: 4px solid var(--sector-educacion);">
+          <div style="font-size: 1.8rem; color: var(--sector-educacion); margin-bottom: 12px;"><i class="fas fa-mobile-alt"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: var(--font-serif);">Pago Móvil (Bolívares)</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Para transferencias inmediatas en moneda nacional desde cualquier banco en Venezuela.</p>
+          <div style="background: var(--surface-container-low); padding: 12px; border-radius: var(--radius-sm); font-size: 0.88rem;">
+            <strong>Banco:</strong> Banco Mercantil (0105)<br>
+            <strong>Teléfono:</strong> 0414-1234567<br>
+            <strong>RIF:</strong> J-00000000-0
+          </div>
+        </div>
+
+        <div style="background: var(--surface-pure); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-top: 4px solid var(--sector-juventud);">
+          <div style="font-size: 1.8rem; color: var(--sector-juventud); margin-bottom: 12px;"><i class="fab fa-paypal"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: var(--font-serif);">PayPal Internacional</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Para colaboraciones con tarjeta de crédito desde cualquier lugar del mundo.</p>
+          <div style="background: var(--surface-container-low); padding: 12px; border-radius: var(--radius-sm); font-size: 0.88rem;">
+            <strong>Cuenta PayPal:</strong> paypal@jesuitas.org.ve
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>JESUITAS VENEZUELA</h2>
+          <p>Compañía de Jesús - Oficina de Desarrollo y Donaciones.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#obras">Apostolados</a></li>
+            <li><a href="directorio.html">Directorio Obras</a></li>
+            <li><a href="ser-jesuita.html">Ser Jesuita</a></li>
+            <li><a href="recursos.html">Recursos & Medios</a></li>
+            <li><a href="historia-impacto.html">Historia e Impacto</a></li>
+            <li><a href="donar.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Instituciones</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ucab.edu.ve" target="_blank" rel="noopener">UCAB</a></li>
+            <li><a href="https://www.feyalegria.org/venezuela" target="_blank" rel="noopener">Fe y Alegría</a></li>
+            <li><a href="https://www.gumilla.org" target="_blank" rel="noopener">Centro Gumilla</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contacto Donaciones</h3>
+          <p style="font-size: 0.85rem;">Caracas, Venezuela</p>
+          <p style="font-size: 0.85rem; color: var(--secondary-container);">donaciones@jesuitas.org.ve</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Compañía de Jesús en Venezuela. Todos los derechos reservados.</div>
+        <div class="amdg-tag">A.M.D.G.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
